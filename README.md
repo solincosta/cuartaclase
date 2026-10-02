@@ -10,15 +10,14 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### USE ESTAS LINEAS DE INSTALACION DURANTE EL PROYECTO
 ```
-npm run build
-```
+#Router
+vue add router
 
-### Lints and fixes files
-```
-npm run lint
-```
+#Instalar Axios
+npm install --save axios vue-axios
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#Instalar PrimeVue
+npm install primevue @primeuix/themes
+```
