@@ -31,9 +31,9 @@ export default {
 
   },
   methods: {
-    getAllMotos: async function () {
+    getAllMotos:  function () {
       this.loadingMotos = true;
-      await this.axios
+       this.axios
         .get('https://solincosta.com/apiv2.php?action=getallmotos')
         .then(response => {
           this.motos = response.data.respuesta;

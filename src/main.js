@@ -6,7 +6,7 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
-//Importar Primer Vue
+//Importar Prime Vue
 import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
 
