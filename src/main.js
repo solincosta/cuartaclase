@@ -16,6 +16,9 @@ import Skeleton from 'primevue/skeleton';
 import MenuComponent from './components/MenuComponent.vue'
 import BannerComponent from './components/BannerComponent.vue'
 import CardComponent from './components/CardComponent.vue'
+import Dialog from 'primevue/dialog';
+import InputText from 'primevue/inputtext';
+import Label from 'primevue/label';
 
 const app = createApp(App).use(router);
 //Uso de axios
@@ -33,6 +36,9 @@ app.component("MenuComponent", MenuComponent);
 app.component("BannerComponent", BannerComponent);
 app.component("CardComponent", CardComponent);
 app.component("ButtonPrime", Button);
+app.component("InputText", InputText);
+app.component("LabelPrime", Label);
 app.component("SkeletonPrime", Skeleton);
+app.component("DialogPrime", Dialog);
 
 app.mount('#app');
