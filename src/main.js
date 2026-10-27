@@ -6,6 +6,8 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
+axios.defaults.baseURL = process.env.VUE_APP_API_BASE_URL;
+
 //Importar Prime Vue
 import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';

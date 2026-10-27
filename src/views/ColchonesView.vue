@@ -1,8 +1,7 @@
 <template>
     <section class="container">
         <h1>Prueba API Colchones</h1>
-        <p class="muted">Servidor: {{ apiUrl }}</p>
-
+       
         <!-- 1) GET /getallcolchones -->
         <div class="card">
             <div class="header">
@@ -111,8 +110,7 @@ export default {
 
     data() {
         return {
-            apiUrl: 'http://192.168.1.253:3000',
-
+            
             // getallcolchones
             colchones: [],
             colchonesCargados: false,
@@ -143,7 +141,7 @@ export default {
             this.loadingColchones = true
             this.errorColchones = ''
             try {
-                const response = await axios.get(`${this.apiUrl}/getallcolchones`)
+                const response = await axios.get("getallcolchones")
                 this.colchones = response.data
                 this.colchonesCargados = true
             } catch (error) {
@@ -160,7 +158,7 @@ export default {
             this.errorCompra = ''
             this.mensajeCompra = ''
             try {
-                const response = await axios.post(`${this.apiUrl}/buycolchon`, {
+                const response = await axios.post("buycolchon", {
                     id_colchon: Number(this.formCompra.id_colchon),
                     documento_cliente: Number(this.formCompra.documento_cliente),
                 })
@@ -178,7 +176,7 @@ export default {
             this.errorComprados = ''
             this.comprasConsultadas = false
             try {
-                const response = await axios.get(`${this.apiUrl}/getcolchonescomprados`, {
+                const response = await axios.get("getcolchonescomprados", {
                     params: { documento_cliente: this.documentoConsulta },
                 })
                 this.comprados = response.data
